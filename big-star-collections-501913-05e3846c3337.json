@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "big-star-collections-501913",
+  "private_key_id": "05e3846c3337ac0780786bb9c1129dcb93dfcd7c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZ7YR+mChL0JEk\nmmKwE7uXP8AIUEJe0IjSwDc1KWG3LrChSF4ELPSnPQtTgna1wNlJCFBVm99aYnMX\nrI53WFqgkh/04RQdGy8u7eOO0fHuYbJZSXryysx5ZsYbSbcN/HfeIplpmWnv64Ji\nyL0NhALS/JfgJT6AUVoeEPXjNB/eQE3uRpj8qmTcWjL+LMTkWXv/763BVc4obj7F\n3PLthXYZiRuXZGKJQyH3WdMKM7k9BiGIKWPGEgOxWUfb4gGV0pU9w7apM8usKuoY\nwetzPA3IGzOIhLZPcNHGt/6kpV1jOkU8ZjfUyRxm3IZMO6Jsv8IhJEFChEF234Lw\nYbaPvc3jAgMBAAECggEABRQrUaVLex4sjm/SpkvaGVebqsCZa2BCGrdEEhxuxzgd\nVwTlZq+C3CA+EqooXhVVJbCTPrYtPwwAUVLs1wyGFYE89sCwGVA4NJ3H/zIWs07a\nOzPNMQ9XiJTD6oA4oJN7r6pFbQKYR3EeTshi2jJzZmYLRrwCIuIXzuTnoMM8ODpj\nEERRWmo3Cth4KbqRgum6rtelKIHqqc/oqxcAveR1XbjG9V4BGQn/nDhxhNr6oHXd\n7Zv3Pha7KbkgBpfzLdrgVvcJSzrsgkwXCUW9b4vkE+CNLSQcWSTAEiAMU+qo/9d/\nw6I85XSa9f+VR3FfQ+bmCu2T3eiybj4RHE4EJsq/8QKBgQD4+B01fA6X2s8eZTD+\nWHJUnpycUZMOmqvPmZtHRcEKEA41mruAPKhljmVSDUQnIUNDMrf1N0CCrdxAnJrN\nZ31/+Dlk2w5HuW4JPvi5+GfHa2AjyUbttCBJdikfQDpyJHHHMPKtcz2HtS7LkHLu\nZ5hEcGMlaOJBYE1xEnRRSp9h9QKBgQDgFP6LKNohwHrSFAAJkQ8AZfZvKYTCR+/V\nIyYZPEtOgc0/6iw20xG+YncPzLEVDUOHmS0gcPzflSaxs0UebJApaWb3P/mIb8m6\nhLtxLizy7hzh325A2pmFCgd6RaKGQinipVG0q7akrwRzRTqPmjCpvuW9EUwgOVm/\nrK8UO84RdwKBgQDvOKAAMypmeOVIRFzWFzAL5LeAb9VIVA/AEs0jp397Zr/we7Or\n3RzFMBRkycBxhMF3gPVHFgbTSbD3GEKaGNV6r4yePukyu5ZiJfKh5m/5KlAfMpgH\ncGsRiwqqL3G5GRGGHp8fUDqP+eRzzmDQeBPTttVdLbEwthLTEbNYJMaOPQKBgAUu\n9yRo8YLOXQj3BXkzLdGoiibQIw4Lc/TON1dmGafbQNA1rogmIcbxqCdpaL8/60v7\nsxuJAZB6dsatiu/FOyB6G7OkezU4wMXbxCo+EzQbZfejn31IkTyOmtWtPrE0Xpur\nj1RKlJMCqWuxMkWYH4ANtmrFN6mXKghRCkvBhmbJAoGBAKmcnVTCbU0gBKa8uqT9\nOGiMoc9QUVW4+EVdcHJKjBRzWCaJYyNEs9149cvzI2g6BvliXDLjnknWzSAXCCab\nQTAQ3+mu6YPR0uxQFdPfyCHMiUMZsoUwpLkw6bKlH6EvjrEWTFUPXUCcepCKOy2y\nZZ9bCkMKBR2bc+rxXKbyHoCl\n-----END PRIVATE KEY-----\n",
+  "client_email": "airbyte@big-star-collections-501913.iam.gserviceaccount.com",
+  "client_id": "105170625580415548968",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/airbyte%40big-star-collections-501913.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
