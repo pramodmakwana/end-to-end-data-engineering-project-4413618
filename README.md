@@ -1,49 +1,51 @@
-# End-to-End Data Engineering Project
-This is the repository for the LinkedIn Learning course End-to-End Data Engineering Project. The full course is available from [LinkedIn Learning][lil-course-url].
+# Ecommerce ELT Pipeline — Airbyte, dbt, Dagster
 
-![End-to-End Data Engineering Project][lil-thumbnail-url] 
+An end-to-end ELT (Extract, Load, Transform) pipeline that ingests raw ecommerce data, loads it into a cloud data warehouse, transforms it into analytics-ready models, and orchestrates the whole workflow — built using the modern open-source data stack.
 
-The world of data engineering is ever-changing, with new tools and technologies emerging on a regular basis. Building an effective analytics platform can be a daunting task, especially if you’re not familiar with all the tools available. How do you turn scattered, complex data into a model that drives insights and decision-making?
-In this course, Thalia Barrera teaches data professionals how to implement an end-to-end data engineering project using open tools from the modern data stack. She touches on best practices such as data modeling, testing, documentation and version control and shows you how to efficiently extract, load, and transform data into a unified, analytics-ready format. Thalia shows you how to confidently select and use tools through practical examples—taking you through the construction of a robust data pipeline for a fictional ecommerce company—and how to implement best practices in data engineering.
+## What this project does
 
-## Instructions
-This repository has two branches: `main` holds the initial state of the project, and `finished` holds the final state. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
+1. **Extract & Load** — [Airbyte](https://airbyte.com/) pulls raw ecommerce data and loads it into cloud storage
+2. **Store** — Data lands in **Google Cloud Storage** and is loaded into **BigQuery** as the analytics warehouse
+3. **Transform** — [dbt](https://www.getdbt.com/) models raw tables into clean, tested, analytics-ready tables (staging → intermediate → marts)
+4. **Orchestrate** — [Dagster](https://dagster.io/) schedules and monitors the pipeline end to end, so each stage runs in the right order and failures are visible
 
-## Branches
-You will be working in the `main` branch throughout the course. At any time, you can checkout the `finished` branch to consult how the finished project looks like.
+```
+Raw Ecommerce Data → Airbyte (Extract & Load) → GCS / BigQuery → dbt (Transform) → Analytics-Ready Tables
+                                                                        ↑
+                                                              Orchestrated by Dagster
+```
 
-## Prerequisites
-Ensure you have Python 3 installed. If not, you can download and install it from Python's official website.
+## What I actually built and debugged
 
-## Installing
-1. Fork the Repository:
-    - Click the "Fork" button on the top right corner of this repository.
-2. Clone the repository:
-    - `git clone https://github.com/YOUR_USERNAME/end-to-end-data-engineering-project-4413618.git`
-    - Note: Replace YOUR_USERNAME with your GitHub username
-3. Navigate to the directory:
-    - `cd end-to-end-data-engineering-project-4413618`
-4. Set Up a Virtual Environment:
-    - For Mac:
-        - `python3 -m venv venv` 
-        - `source venv/bin/activate`
-    - For Windows:
-        - `python -m venv venv`
-        - `.\venv\Scripts\activate`
-5. Install Dependencies:
-    - `pip install -e ".[dev]"`
+This project is based on the LinkedIn Learning course *"End-to-End Data Engineering Project"* by Thalia Barrera, which I used as a structured starting point to learn the modern data stack hands-on. On top of following the course, I:
 
+- Set up and troubleshot a **local Airbyte deployment via `abctl`** on Windows — including resolving connection and container startup issues not covered in the course walkthrough
+- Configured **GCP service account authentication** to connect Airbyte to Google Cloud Storage and BigQuery
+- Ran the full pipeline end-to-end locally and validated data landing correctly at each stage (raw → warehouse → transformed models)
+- Reviewed and adapted the dbt models and Dagster orchestration jobs to understand how each layer of the stack fits together
 
-### Instructor
+## Tech stack
 
-Thalia Barrera 
-                            
+| Layer | Tool |
+|---|---|
+| Ingestion | Airbyte |
+| Storage / Warehouse | Google Cloud Storage, BigQuery |
+| Transformation | dbt |
+| Orchestration | Dagster |
+| Language | Python |
 
+## Why I built this
 
-                            
+I come from a financial-services data analytics background (SQL, Python, reporting) and wanted hands-on experience with the tools that sit "upstream" of analytics — ingestion, warehousing, and orchestration — to move toward data engineering. This project was my way of getting real, working experience with Airbyte, dbt, and Dagster rather than just reading about them.
 
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/thalia-barrera).
+## Next steps
 
-[lil-course-url]: https://www.linkedin.com/learning/end-to-end-data-engineering-project?dApp=59033956&leis=LAA
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/D4D0DAQFQihfehsNCiQ/learning-public-crop_288_512/0/1698869440746?e=2147483647&v=beta&t=3G9Icq-7JuCKrWsa5lQMv3mLiqyy5NkXwj8urZEXCWw
+- [ ] Swap in a real public dataset (e.g. a financial/investment dataset) in place of the course's sample ecommerce data
+- [ ] Add custom dbt models and data-quality tests (`unique`, `not_null`, `relationships`)
+- [ ] Add a simple architecture diagram
+- [ ] Deploy the pipeline to run on a schedule in the cloud rather than locally
+
+## Credit
+
+Original course structure and starter code: [LinkedIn Learning — End-to-End Data Engineering Project](https://www.linkedin.com/learning/end-to-end-data-engineering-project) by Thalia Barrera.
 
